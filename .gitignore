@@ -1,0 +1,46 @@
+# pypi
+/build
+/dist
+
+# do not wants
+*.py[c|o]
+*.egg-info
+*.egg
+.*.swp
+__pycache__
+.DS_Store
+.env
+
+# temp files
+docs/_build
+tests/.noseids
+/.tox
+
+# IDEs
+.vscode
+.idea
+
+# runtime files
+biothings/.git-info
+biothings/tests/hub/**/output
+package-lock.json
+node_modules
+
+# testing
+.pytest_cache/
+config.py
+/config
+/config_
+!/tests/web/handlers/config.py
+!/tests/hub/hubdb/config.py
+.hubdb
+.hubdb.*
+*.biothings_hub*
+
+# other local files
+.notes/
+.env
+.notes
+data
+datasources
+
