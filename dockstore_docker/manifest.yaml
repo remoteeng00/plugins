@@ -1,0 +1,12 @@
+---
+version: '0.3'
+name: 'dockstore_docker'
+dumper:
+  data_url:
+#  - docker://localhost?image=dockstore_dumper&tag=latest&path=/data/dockstore_crawled/data.ndjson&exec_command="/home/biothings/run-dockstore.sh"&keep_container=1
+  - docker://localhost?image=dockstore_dumper&path=/data/dockstore_crawled/data.ndjson&exec_command="/home/biothings/run-dockstore.sh"&keep_container=1
+  uncompress: true
+uploader:
+  parser: parser:load_data
+  mapping: mapping:custom_mapping
+  on_duplicates: ignore
