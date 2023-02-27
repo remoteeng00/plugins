@@ -6,8 +6,8 @@ requires:
 - numpy
 dumper:
   data_url:
-  - docker://localhost?image=praqma/network-multitool&tag=latest&path=/tmp/annotations.zip&custom_cmd="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=false&get_version_cmd="md5sum {} | awk '{ print $1 }'"
-#  - docker://localhost?container_name=<YOUR CONTAINER NAME>&path=/tmp/annotations.zip&custom_cmd="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=true&get_version_cmd="md5sum {} | awk '{ print $1 }'"
+  - docker://localhost?image=praqma/network-multitool&tag=latest&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=false&get_version_cmd="md5sum {} | awk '{ print $1 }'"
+#  - docker://localhost?container_name=<YOUR CONTAINER NAME>&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=true&get_version_cmd="md5sum {} | awk '{ print $1 }'"
   uncompress: true
 #  release: "version:get_release"
 uploader:
