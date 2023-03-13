@@ -7,7 +7,7 @@ requires:
 dumper:
   data_url:
    - docker://localhost?image=test-docker-dumper&tag=latest
-#  - docker://localhost?container_name=sad_mahavira&image=praqma/network-multitool&tag=latest&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=false"
+#  - docker://localhost?container_name=mytest2&image=test-docker-dumper&tag=latest&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=false"
 #  - docker://localhost?image=test-docker-dumper&tag=latest&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=false&get_version_cmd="md5sum {} | awk '{ print $1 }'"
 #  - docker://localhost?container_name=<YOUR CONTAINER NAME>&path=/tmp/annotations.zip&exec_command="/usr/bin/wget https://s3.pgkb.org/data/annotations.zip -O /tmp/annotations.zip"&keep_container=true&get_version_cmd="md5sum {} | awk '{ print $1 }'"
   uncompress: true
